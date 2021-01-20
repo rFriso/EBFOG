@@ -1,3 +1,0 @@
-#! /usr/bin/env bash
-
-wmake libso 2>&1 | tee ./log.wmake
