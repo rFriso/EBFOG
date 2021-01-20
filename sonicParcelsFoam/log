@@ -1,0 +1,14 @@
+Making dependency list for source file sonicFoam.C
+g++ -std=c++11 -m64 -DOPENFOAM_PLUS=1706 -Dlinux64 -DWM_ARCH_OPTION=64 -DWM_DP -DWM_LABEL_SIZE=32 -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter -Wno-invalid-offsetof -O3  -DNoRepository -ftemplate-depth-100 -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/transportModels/compressible/lnInclude -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/thermophysicalModels/basic/lnInclude -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/TurbulenceModels/turbulenceModels/lnInclude -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/TurbulenceModels/compressible/lnInclude -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/meshTools/lnInclude -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/sampling/lnInclude -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/finiteVolume/lnInclude -IlnInclude -I. -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/OpenFOAM/lnInclude -I/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/OSspecific/POSIX/lnInclude   -fPIC -c sonicFoam.C -o Make/linux64GccDPInt32Opt/sonicFoam.o
+In file included from /home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/src/OpenFOAM/lnInclude/postProcess.H:129:0,
+                 from sonicFoam.C:46:
+./createFields.H: In function ‘int main(int, char**)’:
+./createFields.H:11:1: error: ‘SLGThermo’ was not declared in this scope
+ SLGThermo slgThermo(mesh,thermo);
+ ^
+In file included from sonicFoam.C:52:0:
+createFields.H:11:1: error: ‘SLGThermo’ was not declared in this scope
+ SLGThermo slgThermo(mesh,thermo);
+ ^
+/home_san/home_user_centec_cluster05/OpenFOAM/OpenFOAM-v1706/wmake/rules/General/transform:28: recipe for target 'Make/linux64GccDPInt32Opt/sonicFoam.o' failed
+make: *** [Make/linux64GccDPInt32Opt/sonicFoam.o] Error 1
